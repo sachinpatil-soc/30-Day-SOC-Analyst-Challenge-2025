@@ -57,6 +57,8 @@ Use Filter Current Log → Enter Event ID: 4104
 Look for an event showing the execution of Get-LocalUser
 📸 Take a screenshot of the event details.
 
+![image alt](https://github.com/sachinpatil-soc/30-Day-SOC-Analyst-Challenge-2025/blob/57717068e2fcc8b812473aaff7c1c408a294f752/powershell_event.JPEG)
+
 ✅ Conclusion
 Why It Matters: Logs help security professionals detect, investigate, and respond to threats.
 SOC Analyst Insight: Analysts rely on tools like Event Viewer to monitor real-time events and investigate suspicious behavior.
