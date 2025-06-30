@@ -142,6 +142,7 @@ Click OK.
 Look for an entry that clearly shows the execution of the Get-LocalUser command within the event details.
 
 📸 Take a screenshot of the event details. This screenshot should clearly show the execution of Get-LocalUser command logged under Event ID 4104.
+![image alt](https://github.com/sachinpatil-soc/30-Day-SOC-Analyst-Challenge-2025/blob/main/Windows-powershell.JPEG?raw=true) 
 ✅ Conclusion
 
 Understanding Log Analysis: This lab reinforces that logs are crucial for detecting, investigating, and responding to security incidents. Through hands-on experience with Windows Event Viewer and an introduction to Linux log files, you can begin to monitor system activity and identify potential security issues.
