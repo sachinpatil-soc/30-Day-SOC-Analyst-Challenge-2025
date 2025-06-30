@@ -110,6 +110,8 @@ Screenshots demonstrating successful log analysis for both successful and failed
 
 Event ID 4624 (Successful Login): A screenshot showing a successful login event from the Security logs.
 
+![image alt](https://github.com/sachinpatil-soc/30-Day-SOC-Analyst-Challenge-2025/blob/e74d7e17ca4fb65d6fca37346c0d2cba58a14fcd/windows-securty-logs-4624.JPEG)
+
 
 
 Event ID 4625 (Failed Login): A screenshot showing a failed login attempt event (Event ID 4625) from the Security logs, explicitly highlighting the username, logon type, and source network address.
