@@ -1,9 +1,10 @@
-🚀 Day#2: Introduction to Log Analysis
-🎯 Objective
+# 🚀 Day#2: Introduction to Log Analysis
+
+## 🎯 Objective
 
 The objective of this lab is to introduce the foundational concepts of log analysis in cybersecurity. Participants will learn how logs are generated, collected, analyzed, and leveraged for effective security monitoring. This lab will demonstrate how SOC Analysts use log data to detect security incidents on both Windows and Linux systems.
 
-🧠 What is a Log?
+## 🧠 What is a Log?
 
 A log is a chronological record of events or activities that occur on a system, application, or network device. Logs are indispensable for monitoring system behavior, detecting security incidents, debugging, and conducting forensic investigations. Key information typically captured in a log entry includes:
 
@@ -15,7 +16,7 @@ Severity: The criticality level of the event (e.g., Critical, Error, Warning, In
 
 Source: The origin of the event (e.g., User, Process, Service, IP Address).
 
-🐧 Linux auth.log Example
+## 🐧 Linux auth.log Example
 
 Here’s an example of a failed SSH login attempt from a Linux auth.log:
 
@@ -37,9 +38,9 @@ port 54321 — Source port
 
 ssh2 — Protocol version
 
-🌐 Common Log Sources
+## 🌐 Common Log Sources
 
-On Linux:
+### On Linux:
 
 System Logs (/var/log/): Contains core system messages. Important files include:
 
@@ -51,7 +52,7 @@ System Logs (/var/log/): Contains core system messages. Important files include:
 
 Application Logs: Specific to applications, such as web server logs (/var/log/apache2/access.log), or database logs (/var/log/mysql/error.log).
 
-On Windows:
+### On Windows:
 
 Accessible via Event Viewer (eventvwr.msc), providing centralized access to:
 
@@ -63,7 +64,8 @@ Application Logs: Contains events from installed applications.
 
 PowerShell Logs: Logs detailed information about PowerShell command execution, including suspicious scripts (requires specific logging to be enabled).
 
-👩‍💻 How Does a SOC Analyst Use Log Analysis?
+
+## 👩‍💻 How Does a SOC Analyst Use Log Analysis?
 
 Log analysis is a cornerstone of Security Operations Center (SOC) activities:
 
@@ -75,7 +77,8 @@ Security Monitoring: Continuous, real-time log analysis helps in proactively ide
 
 Compliance & Auditing: Logs are vital for demonstrating adherence to regulatory standards (e.g., GDPR, HIPAA) and for internal auditing.
 
-📊 Popular Tools for Log Analysis
+
+## 📊 Popular Tools for Log Analysis
 
 While Event Viewer and grep/tail are basic tools, SOCs use more advanced platforms for large-scale log management:
 
@@ -87,17 +90,19 @@ Graylog: An open-source log management platform offering centralized logging and
 
 Wazuh: An open-source security monitoring platform that integrates host-based intrusion detection (HIDS), log analysis, and security analytics.
 
-🧪 Lab Task: Simulating and Detecting Windows PowerShell Events
+
+## 🧪 Lab Task: Simulating and Detecting Windows PowerShell Events
 
 This hands-on task will guide you through generating a specific event in Windows and then locating it within the security logs.
 
-Lab Setup
+## Lab Setup
 
 Systems: Windows 10/11 or Windows Server 2019/2022
 
 Tools: Windows Event Viewer, PowerShell (pre-installed)
 
-Preparation
+
+## Preparation
 
 To ensure detailed PowerShell logging for this lab, follow these steps:
 
@@ -117,7 +122,7 @@ Verify Event Viewer Path: Familiarize yourself with the location where PowerShel
 
 Applications and Services Logs → Microsoft → Windows → PowerShell → Operational.
 
-⚔️ Step 1: Simulate a Suspicious PowerShell Command
+## ⚔️ Step 1: Simulate a Suspicious PowerShell Command
 
 To simulate an activity commonly performed during reconnaissance by attackers, open an elevated PowerShell session (Run as Administrator) and execute the following command:
 
@@ -125,7 +130,7 @@ Get-LocalUser | Select-Object Name, Enabled
 
 Context: This command lists all local user accounts on the system. Attackers frequently use such enumeration techniques post-exploitation to gather information about potential targets or privilege escalation paths.
 
-🔍 Step 2: Detect the Log in Windows Event Viewer
+##b🔍 Step 2: Detect the Log in Windows Event Viewer
 
 After executing the PowerShell command, verify its logging in Event Viewer:
 
