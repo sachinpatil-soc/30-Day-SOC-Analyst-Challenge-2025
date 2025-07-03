@@ -34,13 +34,15 @@ Wireshark is an open-source network protocol analyser that lets you capture and 
 
 ## 📸 Submission
 
-Submit screenshots showing:
+### Submit screenshots showing:
 
-Create a New Profile Name "SOC Analyst" and share the snapshot
+## Create a New Profile Name "SOC Analyst" and share the snapshot
 ![image alt](https://github.com/sachinpatil-soc/30-Day-SOC-Analyst-Challenge-2025/blob/1d4f058a88713b3145de75409f4ca03a619eaaa3/SOC-Analyst.png)
 
 
-Create a display filter to capture ICMP traffic and share the snapshot
+## Create a display filter to capture ICMP traffic and share the snapshot
 ![image alt](https://github.com/sachinpatil-soc/30-Day-SOC-Analyst-Challenge-2025/blob/1d4f058a88713b3145de75409f4ca03a619eaaa3/ICMP.png)
 
-Create a capture filter to capture ICMP traffic and share the snapshot
+
+## Create a capture filter to capture ICMP traffic and share the snapshot
+![image alt](https://github.com/sachinpatil-soc/30-Day-SOC-Analyst-Challenge-2025/blob/841166e8bf4d59080ff6eaa9743aebc68d8a1c7a/Capture-ICMP.png)
