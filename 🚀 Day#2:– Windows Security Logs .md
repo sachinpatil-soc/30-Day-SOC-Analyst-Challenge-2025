@@ -5,7 +5,7 @@ This repository documents my progress through a 30-day hands-on challenge, desig
 
 ## 🎯 Objective
 
-The objective of this lab is to introduce participants to Windows Security Logs and provide hands-on experience in analysing these logs for security-related events. You will learn to explore and interpret various critical security logs, including login attempts, user account changes, and other system events that may indicate potential security threats.
+The objective of this lab is to learn Windows Security Logs and provide hands-on experience in analysing these logs for security-related events. Will learn to explore and interpret various critical security logs, including login attempts, user account changes, and other system events that may indicate potential security threats.
 
 ## 🛠️ Lab Setup
 
@@ -120,4 +120,4 @@ Event ID 4624 (Successful Login): A screenshot showing a successful login event 
 
 Event ID 4625 (Failed Login): A screenshot showing a failed login attempt event (Event ID 4625) from the Security logs, explicitly highlighting the username, logon type, and source network address. 
 
-![image alt](https://github.com/sachinpatil-soc/30-Day-SOC-Analyst-Challenge-2025/blob/main/windows-securty-logs-4625.JPEG?raw=true)
+![image alt](https://github.com/sachinpatil-soc/30-Day-SOC-Analyst-Challenge-2025/blob/45038830a4e1d079a427b6b45100b10956b0be3a/Images/windows-securty-logs-4625.JPEG)
