@@ -5,11 +5,9 @@ This repository documents my progress through a 30-day hands-on challenge, desig
 # 🚀 Day#1: Introduction to Log Analysis
 
 ## 🎯 Objective
-
-The objective of this lab is to introduce the foundational concepts of log analysis in cybersecurity. Participants will learn how logs are generated, collected, analyzed, and leveraged for effective security monitoring. This lab will demonstrate how SOC Analysts use log data to detect security incidents on both Windows and Linux systems.
+The objective of this lab is the foundational concepts of log analysis in cybersecurity. Will learn how logs are generated, collected, analyzed, and leveraged for effective security monitoring. This lab will demonstrate how SOC Analysts use log data to detect security incidents on both Windows and Linux systems.
 
 ## 🧠 What is a Log?
-
 A log is a chronological record of events or activities that occur on a system, application, or network device. Logs are indispensable for monitoring system behavior, detecting security incidents, debugging, and conducting forensic investigations. Key information typically captured in a log entry includes:
 
 Timestamp: The exact date and time the event occurred.
@@ -134,7 +132,7 @@ Get-LocalUser | Select-Object Name, Enabled
 
 Context: This command lists all local user accounts on the system. Attackers frequently use such enumeration techniques post-exploitation to gather information about potential targets or privilege escalation paths.
 
-##b🔍 Step 2: Detect the Log in Windows Event Viewer
+## 🔍 Step 2: Detect the Log in Windows Event Viewer
 
 After executing the PowerShell command, verify its logging in Event Viewer:
 
@@ -150,16 +148,17 @@ Click OK.
 
 Look for an entry that clearly shows the execution of the Get-LocalUser command within the event details.
 
-📸 Take a screenshot of the event details. This screenshot should clearly show the execution of Get-LocalUser command logged under Event ID 4104.
-![image alt](https://github.com/sachinpatil-soc/30-Day-SOC-Analyst-Challenge-2025/blob/main/Windows-powershell.JPEG?raw=true) 
 
-✅ Conclusion
+
+## ✅ Conclusion
 
 Understanding Log Analysis: This lab reinforces that logs are crucial for detecting, investigating, and responding to security incidents. Through hands-on experience with Windows Event Viewer and an introduction to Linux log files, you can begin to monitor system activity and identify potential security issues.
 
 SOC Analyst Role: Log analysis is a core competency for SOC Analysts, enabling them to detect threats, investigate incidents, and help ensure system compliance.
 
-📸 Submission
+## 📸 Submission
 
-Submit a screenshot of the log generated on the Windows machine, specifically showing the PowerShell Get-LocalUser command execution (Event ID 4104) in Event Viewer.
+Submit a screenshot of execution (Event ID 4104) in Event Viewer.
+
+![image alt](https://github.com/sachinpatil-soc/30-Day-SOC-Analyst-Challenge-2025/blob/634641f522c0b9a0050713e97c112fe88bc2fe58/Images/Windows-powershell.JPEG) 
 
