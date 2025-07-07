@@ -1,13 +1,13 @@
 # 🚀Day#9: Wireshark Basics – TLS Protocol Analysis
 
 
-🎯 Objective
+## 🎯 Objective
 
 The objective of this lab is to analyse TLS (Transport Layer Security) traffic using Wireshark. will explore how TLS secures data over the network, understand handshake messages, and identify metadata like server names and certificate details.
 
-🛠️ Lab Setup
+## 🛠️ Lab Setup
 
-System Requirements
+### System Requirements
 
 Operating System: Windows 10/11 (or Linux/macOS)
 Software: Wireshark (latest version)
@@ -17,7 +17,7 @@ Files Needed
 
 TLS is a cryptographic protocol that provides secure communication over the internet. It runs over TCP, commonly on port 443, and is used in HTTPS, FTPS, SMTPS, etc.
 
-Key TLS Handshake Messages:
+### Key TLS Handshake Messages:
 
 Message Type	Description
 Client Hello	Client initiates secure connection, offers cipher suites
@@ -25,7 +25,9 @@ Server Hello	Server selects cipher and provides certificate
 Certificate	Server provides digital certificate (X.509)
 Key Exchange	Client and server exchange keys for session
 Finished	Secure session begins
-🔍 Most Common TLS Display Filters
+
+
+## 🔍 Most Common TLS Display Filters
 
 Use these filters in Wireshark’s Display Filter bar:
 
@@ -36,7 +38,9 @@ tls.handshake.type == 1	Client Hello messages
 tls.handshake.type == 2	Server Hello messages
 tls.record.version == 0x0303	TLS 1.2 traffic
 tls.record.version == 0x0304	TLS 1.3 traffic
-✅ Conclusion
+
+
+## ✅ Conclusion
 
 TLS secures communication using encryption, making traffic unreadable without keys.
 
@@ -56,10 +60,18 @@ Suspicious or self-signed certificates
 
 Malicious domain encryption abuse
 
-📸 Submission
+## 📸 Submission
 
-Submit a screenshot showing:
+### Submit a screenshot showing:
 
-Show all TLS traffic
-Show Client Hello messages
-Show TLS 1.2 traffic
+### Show all TLS traffic
+![image alt](https://github.com/sachinpatil-soc/30-Day-SOC-Analyst-Challenge-2025/blob/cb6692755bfce544088a91cb48b61b0ecfb46591/Images/TLS.png)
+
+
+### Show Client Hello messages
+![image alt](https://github.com/sachinpatil-soc/30-Day-SOC-Analyst-Challenge-2025/blob/cb6692755bfce544088a91cb48b61b0ecfb46591/Images/hello-msg.png)
+
+
+### Show TLS 1.2 traffic
+![image alt](https://github.com/sachinpatil-soc/30-Day-SOC-Analyst-Challenge-2025/blob/cb6692755bfce544088a91cb48b61b0ecfb46591/Images/tlc-1.2-traffic.png)
+
