@@ -29,15 +29,35 @@ Finished	Secure session begins
 
 ## 🔍 Most Common TLS Display Filters
 
-Use these filters in Wireshark’s Display Filter bar:
+Use these filters in Wireshark’s Display Filter bar to analyze TLS traffic:
 
-Filter	Description
-tls	Show all TLS traffic
-tcp.port == 443	TLS over HTTPS
-tls.handshake.type == 1	Client Hello messages
-tls.handshake.type == 2	Server Hello messages
-tls.record.version == 0x0303	TLS 1.2 traffic
-tls.record.version == 0x0304	TLS 1.3 traffic
+Filter
+
+Description
+
+tls
+
+Show all TLS traffic
+
+tcp.port == 443
+
+TLS over HTTPS (standard port)
+
+tls.handshake.type == 1
+
+Client Hello messages (start of handshake)
+
+tls.handshake.type == 2
+
+Server Hello messages (response to Client Hello)
+
+tls.record.version == 0x0303
+
+TLS 1.2 traffic (specific version)
+
+tls.record.version == 0x0304
+
+TLS 1.3 traffic (specific version)
 
 
 ## ✅ Conclusion
