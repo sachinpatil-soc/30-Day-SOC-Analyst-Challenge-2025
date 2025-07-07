@@ -60,6 +60,7 @@ tls.record.version == 0x0304
 TLS 1.3 traffic (specific version)
 
 
+
 ## ✅ Conclusion
 
 TLS secures communication using encryption, making traffic unreadable without keys.
