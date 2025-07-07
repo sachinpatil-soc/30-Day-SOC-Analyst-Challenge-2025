@@ -1,60 +1,43 @@
-🚀 Day#9: Wireshark Basics – TLS Protocol Analysis
-🎯 Objective
+# 🚀 Day#9: Wireshark Basics – TLS Protocol Analysis
 
-The objective of this lab is to analyse TLS (Transport Layer Security) traffic using Wireshark. Participants will explore how TLS secures data over the network, understand key handshake messages, and identify crucial metadata such as server names and certificate details. This analysis is vital for a SOC Analyst to identify potential security anomalies or misconfigurations.
+## 🎯 Objective
+The objective of this lab is to analyse TLS (Transport Layer Security) traffic using Wireshark. will explore how TLS secures data over the network, understand key handshake messages, and identify crucial metadata such as server names and certificate details. This analysis is vital for a SOC Analyst to identify potential security anomalies or misconfigurations.
 
-🛠️ Lab Setup
+## 🛠️ Lab Setup
 
-System Requirements
+### System Requirements
 
 Operating System: Windows 10/11 (or Linux/macOS)
-
 Software: Wireshark (latest version recommended)
 
-📘 TLS Packet Structure and Fields
-
+## 📘 TLS Packet Structure and Fields
 TLS is a cryptographic protocol that provides secure communication over the internet. It operates over TCP, commonly on port 443 (for HTTPS), but is also used in other secure protocols like FTPS and SMTPS. Understanding the TLS handshake is fundamental for network security analysis.
 
-Key TLS Handshake Messages:
-
-Message Type
-
-Description
-
-Message
-Description
-Client Hello
-Client initiates a secure connection and offers supported cipher suites.
-Server Hello
-Server selects a cipher suite from the client’s offer and provides its certificate.
-Certificate
-Server provides its digital certificate (X.509) for authentication.
-Key Exchange
-Client and server securely exchange cryptographic keys for the session.
-Finished
-Both parties confirm the handshake is complete, and the secure session begins.
+### Key TLS Handshake Messages:
+| Message Type                     | Description                                      |
+| :------------------------- | :----------------------------------------------- |
+| `Client Hello`                  | Client initiates secure connection, offers cipher suites                          |
+| `Server Hello`                       | Server selects cipher and provides certificate |
+| `Certificate `                        | Server provides digital certificate (X.509)     |
+| `Key Exchange`                  | Client and server exchange keys for session|
+| `Finished`                               | Secure session begins          |
 
 
-🔍 Most Common TLS Display Filters
+
+## 🔍 Most Common TLS Display Filters
 
 Use these filters in Wireshark’s Display Filter bar to analyze TLS traffic effectively:
 
-Filter
-Description
-tls
-Show all TLS traffic
-tcp.port == 443
-TLS over HTTPS (standard port)
-tls.handshake.type == 1
-Client Hello messages (start of handshake)
-tls.handshake.type == 2
-Server Hello messages (response to Client Hello)
-tls.record.version == 0x0303
-TLS 1.2 traffic (specific version)
-tls.record.version == 0x0304
-TLS 1.3 traffic (specific version)
+| Filter                     | Description                                      |
+| :------------------------- | :----------------------------------------------- |
+| `tls`                      | Show all TLS traffic                             |
+| `tcp.port == 443`          | TLS over HTTPS (standard port)                   |
+| `tls.handshake.type == 1`  | Client Hello messages (start of handshake)       |
+| `tls.handshake.type == 2`  | Server Hello messages (response to Client Hello) |
+| `tls.record.version == 0x0303` | TLS 1.2 traffic (specific version)             |
+| `tls.record.version == 0x0304` | TLS 1.3 traffic (specific version)             |
 
-✅ Conclusion
+## ✅ Conclusion
 
 	•	TLS secures communication using encryption, making network traffic unreadable to unauthorised parties without the proper keys.
 	•	Wireshark cannot decrypt encrypted TLS traffic by default (without pre-shared keys or private keys).
@@ -68,12 +51,18 @@ TLS 1.3 traffic (specific version)
 	•	Malicious domains abusing encryption for command-and-control (C2) communication.
 
 
-📸 Submission
+## 📸 Submission
 
-Submit a screenshot showing:
+### Submit a screenshot showing:
 
-All TLS traffic filtered in Wireshark.
+### All TLS traffic filtered in Wireshark.
+![image alt](https://github.com/sachinpatil-soc/30-Day-SOC-Analyst-Challenge-2025/blob/c85fc6a476c020ae82423501169c0429b184ff63/Images/TLS.png)
 
-Client Hello messages filtered in Wireshark.
 
-TLS 1.2 traffic filtered in Wireshark.
+### Client Hello messages filtered in Wireshark.
+![image alt](https://github.com/sachinpatil-soc/30-Day-SOC-Analyst-Challenge-2025/blob/c85fc6a476c020ae82423501169c0429b184ff63/Images/hello-msg.png)
+
+
+
+### TLS 1.2 traffic filtered in Wireshark.
+![image alt](https://github.com/sachinpatil-soc/30-Day-SOC-Analyst-Challenge-2025/blob/c85fc6a476c020ae82423501169c0429b184ff63/Images/tlc-1.2-traffic.png)
