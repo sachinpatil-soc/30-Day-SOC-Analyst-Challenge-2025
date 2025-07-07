@@ -56,7 +56,10 @@ Suspicious file downloads or unauthorized access
 ### Submit a screenshot showing:
 
 ### Show all HTTP traffic
+![image alt](https://github.com/sachinpatil-soc/30-Day-SOC-Analyst-Challenge-2025/blob/30c278d9bc2835a98fe922f6b18ca18942d3663e/http.png)
 
+### Show all GET requests
+![image alt](https://github.com/sachinpatil-soc/30-Day-SOC-Analyst-Challenge-2025/blob/30c278d9bc2835a98fe922f6b18ca18942d3663e/get-request.png)
 
-Show all GET requests
-View requested resources
+### View requested resources
+![image alt](https://github.com/sachinpatil-soc/30-Day-SOC-Analyst-Challenge-2025/blob/30c278d9bc2835a98fe922f6b18ca18942d3663e/view-request.png)
