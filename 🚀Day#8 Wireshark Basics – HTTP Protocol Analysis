@@ -1,23 +1,23 @@
 # 🚀 Day#8: Wireshark Basics – HTTP Protocol Analysis
 
 
-🎯 Objective
+## 🎯 Objective
 
 The objective of this lab is to analyse HTTP (Hypertext Transfer Protocol) packets using Wireshark. Will explore HTTP request/response headers, understand how web communication works, and learn how to detect common HTTP-based attacks or data leaks.
 
 
 
-🛠️ Lab Setup
+## 🛠️ Lab Setup
 
-System Requirements
+### System Requirements
 
 Operating System: Windows 10/11 (or Linux/macOS)
 Software: Wireshark (latest version)
-Files Needed
+
 
 HTTP is an application-layer protocol used for communication between clients (browsers) and web servers. It typically runs over TCP port 80.
 
-Key HTTP Fields:
+### Key HTTP Fields:
 
 Field Name	Description
 Request Method	GET, POST, HEAD, etc.
@@ -27,7 +27,9 @@ URI	Resource path on the server
 Status Code	Server's response status (e.g., 200 OK)
 Content-Type	MIME type of the response (e.g., text/html)
 Cookie/Header	Session or tracking information
-🔍 Most Common HTTP Display Filters
+
+
+## 🔍 Most Common HTTP Display Filters
 
 Use these filters in Wireshark’s Display Filter bar:
 
@@ -38,17 +40,23 @@ http.request.method == "GET"	Show all GET requests
 http.request.uri	View requested resources
 http.set_cookie	Show cookies in HTTP responses
 ip.addr == 192.168.1.10	HTTP traffic to/from specific host
-✅ Conclusion
+
+
+## ✅ Conclusion
 
 HTTP traffic is readable and easy to analyze in Wireshark.
 Analyzing HTTP helps detect:
 Sensitive data exposure in URLs or headers
 Malware beaconing to C2 servers
 Suspicious file downloads or unauthorized access
-📸 Submission
 
-Submit a screenshot showing:
 
-Show all HTTP traffic
+## 📸 Submission
+
+### Submit a screenshot showing:
+
+### Show all HTTP traffic
+
+
 Show all GET requests
 View requested resources
