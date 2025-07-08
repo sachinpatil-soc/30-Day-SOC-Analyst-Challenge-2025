@@ -1,7 +1,7 @@
 # 30-Day-SOC-Analyst-Challenge-2025
 This repository documents my progress through a 30-day hands-on challenge, designed to build and showcase essential SOC Analyst skills for job readiness. Each day features a focused lab or task to deepen understanding and practical expertise in cybersecurity operations.
 
-# 🚀 Day#7: Wireshark Basics – TCP Protocol Analysis
+# 🚀 Day#07: Wireshark Basics – TCP Protocol Analysis
 
 ## 🎯 Objective
 The objective of this lab is to analysing TCP (Transmission Control Protocol) traffic using Wireshark. Will learn how TCP establishes connections, the 3-way handshake process, and how to interpret common TCP fields and flags.
