@@ -2,7 +2,7 @@
 This repository documents my progress through a 30-day hands-on challenge, designed to build and showcase essential SOC Analyst skills for job readiness. Each day features a focused lab or task to deepen understanding and practical expertise in cybersecurity operations.
 
 
-## 🚀Day#11 Splunk Basics – DNS Log Analysis
+# 🚀 Day#11: Splunk Basics – DNS Log Analysis
 
 ## 🎯 Objective
 In this lab will Learn how to ingest and analyze DNS logs in Splunk.
