@@ -2,7 +2,7 @@
 This repository documents my progress through a 30-day hands-on challenge, designed to build and showcase essential SOC Analyst skills for job readiness. Each day features a focused lab or task to deepen understanding and practical expertise in cybersecurity operations.
 
 
-# 🚀 Day#6: Wireshark Basics – ICMP Protocol Analysis
+# 🚀 Day#06: Wireshark Basics – ICMP Protocol Analysis
 
 ## 🎯 Objective
 The objective of this lab is to help, understand and analyse ICMP (Internet Control Message Protocol) packets using Wireshark. will learn to identify echo requests/replies, interpret ICMP packet fields, and apply relevant filters for investigation.
