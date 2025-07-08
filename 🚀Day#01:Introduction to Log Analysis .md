@@ -2,7 +2,7 @@
 
 This repository documents my progress through a 30-day hands-on challenge, designed to build and showcase essential SOC Analyst skills for job readiness. Each day features a focused lab or task to deepen understanding and practical expertise in cybersecurity operations.
 
-# 🚀 Day#1: Introduction to Log Analysis
+# 🚀 Day#01: Introduction to Log Analysis
 
 ## 🎯 Objective
 The objective of this lab is the foundational concepts of log analysis in cybersecurity. Will learn how logs are generated, collected, analyzed, and leveraged for effective security monitoring. This lab will demonstrate how SOC Analysts use log data to detect security incidents on both Windows and Linux systems.
