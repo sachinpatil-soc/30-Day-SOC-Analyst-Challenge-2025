@@ -46,6 +46,13 @@ index=dns_lab sourcetype="json"
 
 ### Submit a screenshot of each of the following:
 
-### SPL query and result for Task 1.
-### SPL query and result for Task 2.
+### SPL query and result for Task 1
+![image alt](https://github.com/sachinpatil-soc/30-Day-SOC-Analyst-Challenge-2025/blob/07d5e554958a0cbf7925be19d81e828b4223dedf/Images/SPL_Query-task-1.png)
+
+
+### SPL query and result for Task 2
+![image alt](https://github.com/sachinpatil-soc/30-Day-SOC-Analyst-Challenge-2025/blob/07d5e554958a0cbf7925be19d81e828b4223dedf/Images/SPL-Query-task-2.png)
+
+
 ### SPL query and result for Task 3
+![image alt](https://github.com/sachinpatil-soc/30-Day-SOC-Analyst-Challenge-2025/blob/07d5e554958a0cbf7925be19d81e828b4223dedf/Images/SPL-Query-task-3.png)
