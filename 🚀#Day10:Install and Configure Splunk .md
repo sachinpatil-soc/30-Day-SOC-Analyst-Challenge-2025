@@ -1,20 +1,16 @@
-🚀#Day10:Install and Configure Splunk
+# 🚀#Day10:Install and Configure Splunk
 
 
-Objective
+## Objective
+The objective of this task is to install and configure Splunk on an Ubuntu machine. By completing this task, will have Splunk up and running to collect and analyze security logs.
 
-The objective of this task is to install and configure Splunk on an Ubuntu machine. By completing this task, students will have Splunk up and running to collect and analyze security logs.
-
-Lab Setup
-
-Requirements
-
+## Lab Setup Requirements
 System: Ubuntu 22.04 / 20.04 (Server or Desktop)
 Tools Required:
 Splunk Enterprise (Free version for local setup)
 Terminal (Command Line Access)
-Steps to Install and Configure Splunk on Ubuntu
 
+### Steps to Install and Configure Splunk on Ubuntu
 Step 1: Download Splunk
 
 Open Terminal and download Splunk using wget:
@@ -36,11 +32,11 @@ Step 3: Access Splunk Web Interface
 Open a web browser and go to:
 http://<your-server-ip>:8000
 Log in with the admin credentials created earlier.
-Conclusion
 
+## Conclusion
 ✅ Successfully installed Splunk on an Ubuntu machine.
 ✅ Configured Splunk as a service and enabled auto-start.
 
-Submission
-
+## Submission
 Share a screenshot of Splunk Web
+![image alt](https://github.com/sachinpatil-soc/30-Day-SOC-Analyst-Challenge-2025/blob/f49d28d1b1ea19dd1a885e19ffc92a426ea42b96/Images/Splunk-enterprise.png)
