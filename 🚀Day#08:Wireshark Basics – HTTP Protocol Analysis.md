@@ -1,11 +1,10 @@
-30-Day-SOC-Analyst-Challenge-2025
+# 30-Day-SOC-Analyst-Challenge-2025
 This repository documents my progress through a 30-day hands-on challenge, designed to build and showcase essential SOC Analyst skills for job readiness. Each day features a focused lab or task to deepen understanding and practical expertise in cybersecurity operations.
+
 
 # 🚀 Day#08: Wireshark Basics – HTTP Protocol Analysis
 
-
 ## 🎯 Objective
-
 The objective of this lab is to analyse HTTP (Hypertext Transfer Protocol) packets using Wireshark. Will explore HTTP request/response headers, understand how web communication works, and learn how to detect common HTTP-based attacks or data leaks.
 
 
