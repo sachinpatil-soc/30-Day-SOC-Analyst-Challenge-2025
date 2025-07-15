@@ -10,13 +10,14 @@ Identify large file transfers and suspicious URI access attempts.
 
 ## 🖥️ Lab Setup
 
-
 	•	Software Availability: Splunk is installed and accessible.
 	•	Data Source: JSON-formatted Zeek-style HTTP logs.
-	•	Data Ingestion: Log file needs to be downloaded and uploaded to Splunk.
+	•	Data Ingestion: Log files need to be downloaded and uploaded to Splunk.
 
 
-## 📥 Download HTTP Log file
+##  <a href=""> 📥 Download HTTP Log file </a>
+
+
 
 ## ⚙️ Steps to Upload HTTP Log into Splunk
 
@@ -59,8 +60,14 @@ Identify large file transfers and suspicious URI access attempts.
 
 ### Submit a screenshot for each of the following:
 
-### Your query and result for Task 1.
-### Your query and result for Task 2.
-### Your query and result for Task 3.
-### Your query and result for Task 4.
-### Your query and result for Task 5.
+### Task 1. Top 10 endpoints generating web traffic
+![image alt](https://github.com/sachinpatil-soc/30-Day-SOC-Analyst-Challenge-2025/blob/9ad2320d179a50b2c1c064558d67a6f8c5a89237/Images/http_log_1.png)
+
+### Task 2. Count the number of server errors (5xx) observed
+![image alt](https://github.com/sachinpatil-soc/30-Day-SOC-Analyst-Challenge-2025/blob/9ad2320d179a50b2c1c064558d67a6f8c5a89237/Images/http_server_error_2.png)
+
+### Task 3. Identify User-Agents associated with possible scripted attacks
+![image alt](https://github.com/sachinpatil-soc/30-Day-SOC-Analyst-Challenge-2025/blob/9ad2320d179a50b2c1c064558d67a6f8c5a89237/Images/http_user_agent_3.png)
+
+### Task 4. Find large file transfers (greater than 500 KB)
+![image alt](https://github.com/sachinpatil-soc/30-Day-SOC-Analyst-Challenge-2025/blob/9ad2320d179a50b2c1c064558d67a6f8c5a89237/Images/http_file_transfer_4.png)
