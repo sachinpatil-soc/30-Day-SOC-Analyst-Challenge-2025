@@ -26,11 +26,12 @@ Wireshark is an open-source network protocol analyser that lets you capture and 
 
 ### 🛡️ Wireshark Use Cases for SOC Analysts
 
-🔍 Incident Investigation: Analyse malicious traffic patterns (e.g., C2 communication, lateral movement)
-🕵️ Malware Analysis: Extract indicators like domains, IPs, and payloads from suspicious network behaviour
-🚨 Threat Hunting: Detect anomalies like DNS tunnelling, beaconing, or unauthorised FTP/SSH usage
-🛠️ Protocol Troubleshooting: Identify service failures, misconfigurations, or latency issues
+**Incident Investigation:**
 
+* **Malicious Traffic Analysis:** Examine suspicious traffic patterns, including C2 communication and lateral movement.
+* **Malware Analysis:** Extract indicators such as domains, IP addresses, and payloads from anomalous network behaviour.
+* **Threat Hunting:** Identify anomalies, including DNS tunnelling, beaconing, and unauthorised FTP/SSH usage.
+* **Protocol Troubleshooting:** Identify service failures, misconfigurations, or latency issues.
 
 ## 📸 Submission
 
