@@ -1,4 +1,8 @@
-# 🚀Project-1-Scanning-and-Enumerating-a-Local-Network-with-Nmap on Kali Linux
+# 30-Day-SOC-Analyst-Challenge-2025
+
+This repository documents my progress through a 30-day hands-on challenge, designed to build and showcase essential SOC Analyst skills for job readiness. Each day features a focused lab or task to deepen understanding and practical expertise in cybersecurity operations.
+
+# 🚀Day#15:Scanning-and-Enumerating-a-Local-Network-with-Nmap on Kali Linux
 
 ## Introduction
 In this project, will learn how to use Nmap, a powerful network scanning tool, to discover devices and services running on a local network. Network scanning and enumeration are critical skills for ethical hackers, as they help in identifying potential targets and vulnerabilities within a network. By the end of this project, will be able to perform basic network scans, identify open ports, and gather information about the devices on your network using Kali Linux.
