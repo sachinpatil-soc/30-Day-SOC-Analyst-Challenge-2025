@@ -1,112 +1,81 @@
-# 30-Day-SOC-Analyst-Challenge-2025
-This repository documents my progress through a 30-day hands-on challenge, designed to build and showcase essential SOC Analyst skills for job readiness. Each day features a focused lab or task to deepen understanding and practical expertise in cybersecurity operations.
+# 🚀Project-2: Log Analysis Basics: Windows Security Logs
 
-# 🚀 Day#02: Log Analysis Basics – Windows Security Logs
-
-## 🎯 Objective
-
-The objective of this lab is to learn Windows Security Logs and provide hands-on experience in analysing these logs for security-related events. Will learn to explore and interpret various critical security logs, including login attempts, user account changes, and other system events that may indicate potential security threats.
-
-## 🛠️ Lab Setup
-
-## Requirements
-
-System: Windows 10/11 or Windows Server 2019/2022
-
-## Tools:
-
-Windows Event Viewer (pre-installed)
-
-PowerShell (pre-installed)
-
-Privileges: Administrative Privileges (required to access and manage certain security logs)
-
-## 🧠 What are Windows Security Logs?
-
-Windows Security Logs contain vital records of security-related events occurring on the system. These logs are indispensable for monitoring security incidents, detecting unauthorized access, and auditing system changes. Key events tracked include:
-
-Successful and Failed Login Attempts: Records users who successfully log in or fail to authenticate, providing crucial insights into access patterns.
-
-Account Lockouts: Logs instances where a user account is locked out due to exceeding the maximum allowed number of incorrect login attempts.
-
-Audit Policy Changes: Tracks modifications made to system audit settings and configurations, which could indicate attempts to hide malicious activity.
-
-Group Membership Changes: Monitors alterations in user group memberships and associated privileges, signaling potential privilege escalation.
-
-Privilege Escalation: Logs events where a user or process successfully gains elevated privileges on the system.
-
-## 🔍 Understanding Event IDs in Security Logs
-
-To effectively analyze Windows Security Logs, it's essential to understand common Event IDs. Here are some you will frequently encounter:
-
-Event ID 4624: Successful Logon.
-
-Event ID 4625: Failed Logon.
-
-Event ID 4740: Account Lockout.
-
-Event ID 4732: A user was added to a security-enabled local group.
-
-Event ID 4672: Special privileges assigned to a new logon (often associated with privilege escalation).
-
-## 🧪 Lab Task: Explore and Analyze Windows Security Logs
-
-## ⚔️ Step 1: Simulate a Failed Login Attempt
-
-To generate relevant log data, we will simulate a failed login attempt.
-
-Create a Test User: First, create a test user, for example, "haxuser1", on your Windows machine (if you don't have a non-admin user already).
-
-Simulate Failed Account Access: Open PowerShell as Administrator and execute the following command with an intentionally incorrect password:
-
-net use \\127.0.0.1\IPC$ /user:haxuser1 WrongPassword
-
-net use: A command used to connect to shared network resources.
-
-\\127.0.0.1\IPC$: This refers to a special hidden administrative share on your local machine (127.0.0.1 is localhost). IPC$ is used for inter-process communication, particularly for authentication.
-
-/user:haxuser1: Specifies the username to attempt authentication with.
-
-WrongPassword: The intentionally incorrect password for the authentication attempt.
-
-Alternatively: You can sign out of your current Windows account and attempt to sign in with the "haxuser1" account using an invalid password at the login screen.
-
-## 🔍 Step 2: Detect the Log in Windows Event Viewer
-
-After simulating the failed login, proceed to the Event Viewer to analyze the generated logs.
-
-Open Event Viewer (run eventvwr.msc).
-
-Navigate to: Windows Logs → Security.
-
-Filter the Security Logs: Right-click on "Security" and select Filter Current Log....
-
-In the Event IDs: field, enter 4625 (for Failed Logon events).
-
-Click OK.
-
-Look for entries that correspond to your simulated failed login attempt.
+## **Objective:**
+The objective of this lab is to learn about  **Windows Security Logs** and help them understand how to analyse logs for security-related events. Will learn how to explore and analyse various security logs such as login attempts, user account changes, and other critical system events that could indicate potential security threats.
 
 
 
-## 📸 Take a screenshot of the event details for Event ID 4625. Ensure the screenshot clearly shows:
+## **Lab Setup**
+### **Requirements:**
+- **System:** Windows 10/11 or Windows Server 2019/2022
+- **Tools:**
+  - **Windows Event Viewer** (pre-installed)
+  - **Notepad** (to create custom events, if needed)
+  - **Administrative Privileges** (to access certain security logs)
 
-Failed Login Attempt Details
+---
 
-User Name (haxuser1)
+## **What are Windows Security Logs?**
+Windows Security Logs contain records of security-related events on the system, such as:
+- **Successful and Failed Login Attempts:** Track users who log in or fail to log in.
+- **Account Lockouts:** Occurs when a user exceeds the maximum allowed number of incorrect login attempts.
+- **Audit Policies:** Logs related to changes in system audit settings and configurations.
+- **Group Membership Changes:** Tracks changes in group memberships and user privileges.
+- **Privilege Escalation:** Logs events when a user gains elevated privileges.
 
-Logon Type
+These logs are valuable for monitoring security incidents, detecting unauthorized access, and auditing system changes.
 
-Source Network Address (should be 127.0.0.1 or your local machine's IP)
+---
 
-## ✅ Conclusion
+## **Understanding Event IDs in Security Logs:**
+Some common **Event IDs** in **Windows Security Logs** that you will encounter include:
+- **Event ID 4624**: Successful Logon.
+- **Event ID 4625**: Failed Logon.
+- **Event ID 4740**: Account Lockout.
+- **Event ID 4732**: A user was added to a security-enabled local group.
+- **Event ID 4672**: Special privileges assigned to a new logon (Privilege escalation).
 
-Understanding Windows Security Logs: These logs are fundamental for identifying suspicious behavior such as unauthorized login attempts, privilege escalation, and critical system configuration changes.
+---
 
-## SOC Analyst Role: As a SOC Analyst, reviewing and analyzing these logs regularly is critical to detecting and responding to security incidents in real-time.
+## **Lab Task: Explore and Analyze Windows Security Logs**
 
-Threat Detection: By continuously monitoring for patterns like multiple failed logins, account lockouts, and privilege escalations, SOC Analysts can quickly detect and mitigate malicious activities on a network.
 
+### **Step 1: Simulate a Failed Login Attempt**
+1. Create a test user name "haxuser1" on Windows machine.
+2. Simulate a failed account access using this command
+   Open **PowerShell** and enter an invalid username and password. You can do this by using the following command:
+   ```cmd
+   net use \\127.0.0.1\IPC$ /user:haxuser1 WrongPassword
+   ```
+   Here:
+   
+| Command Part           | Explanation                                                                                   |
+|------------------------|-----------------------------------------------------------------------------------------------|
+| `net use`              | A command used to connect to shared resources (like network shares or printers).              |
+| `\\127.0.0.1\IPC$`     | A special hidden administrative share called `IPC$` on your local machine (127.0.0.1 = localhost). `IPC$` is used for inter-process communication, especially for authentication purposes. |
+| `/user:haxuser1`       | Specifies the username to use for authentication (in this case, `haxuser1`).                 |
+| `WrongPassword`        | The password you're trying to authenticate with — which is intentionally incorrect.           |
+
+Or Else you can sign out with your existing account and sign in with `haxuser1` account with an invalid password
+
+
+
+### **Step 2: Detect the Log in Windows Event Viewer**
+1. In the **Event Viewer**, navigate to:  
+   `Windows Logs → Security`
+2.  After the failed login, go back to Event Viewer.
+3. Filter the Security Logs for Event ID 4625 (Failed Logon).
+4.. Look for entries that correspond to the failed login attempt.
+5. Take a screenshot of the event details, including:
+   - Failed Login Attempt Details
+   - User Name
+   - Logon Type
+   - Source Network Address
+
+## Conclusion:
+- Understanding Windows Security Logs: Windows Security Logs are essential for identifying suspicious behavior such as unauthorized login attempts, privilege escalation, and system configuration changes.
+- SOC Analyst Role: As a SOC Analyst, reviewing and analyzing these logs regularly is critical to detecting and responding to security incidents in real-time.
+- Threat Detection: By monitoring for multiple failed logins, account lockouts, and privilege escalations, SOC Analysts can quickly detect malicious activities on a network.
 
 ## 📸 Submission
 
