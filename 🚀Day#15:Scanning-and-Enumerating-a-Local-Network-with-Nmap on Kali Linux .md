@@ -9,7 +9,7 @@ In this project, will learn how to use Nmap, a powerful network scanning tool, t
 - Kali Linux installed on machine (either natively, on a virtual machine, or as a live boot).
 
 ## Lab Set-up and Tools
-
+ 
 ### Tools
 - **Kali Linux**: A Debian-derived Linux distribution designed for digital forensics and penetration testing.
 - **Nmap**: Network exploration tool and security/port scanner (pre-installed on Kali Linux).
@@ -56,6 +56,7 @@ Expected Output: Comprehensive information about the devices on the network, inc
 
 
 This project will give a solid foundation in using Nmap for network scanning and enumeration, essential skills for any ethical hacker.
+# 📸 Submission
 
 ![image alt](https://github.com/sachinpatil-soc/Ethical-Hacking-Projects/blob/13096809b3682f84cead953b337cd3a68ede9860/nmap-1.png)
 ![image alt](https://github.com/sachinpatil-soc/Ethical-Hacking-Projects/blob/13096809b3682f84cead953b337cd3a68ede9860/nmap-2.png)
