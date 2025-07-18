@@ -9,9 +9,8 @@ The objective of this lab is to analyse TLS (Transport Layer Security) traffic u
 ## 🛠️ Lab Setup
 
 ### System Requirements
-
-Operating System: Windows 10/11 (or Linux/macOS)
-Software: Wireshark (latest version recommended)
+- Operating System: Windows 10/11 (or Linux/macOS)
+- Software: Wireshark (latest version recommended)
 
 ## 📘 TLS Packet Structure and Fields
 TLS is a cryptographic protocol that provides secure communication over the internet. It operates over TCP, commonly on port 443 (for HTTPS), but is also used in other secure protocols like FTPS and SMTPS. Understanding the TLS handshake is fundamental for network security analysis.
