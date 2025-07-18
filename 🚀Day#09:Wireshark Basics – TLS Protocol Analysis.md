@@ -40,18 +40,17 @@ Use these filters in Wireshark’s Display Filter bar to analyze TLS traffic eff
 | `tls.record.version == 0x0303` | TLS 1.2 traffic (specific version)             |
 | `tls.record.version == 0x0304` | TLS 1.3 traffic (specific version)             |
 
-## ✅ Conclusion
-
-	•	TLS secures communication using encryption, making network traffic unreadable to unauthorised parties without the proper keys.
-	•	Wireshark cannot decrypt encrypted TLS traffic by default (without pre-shared keys or private keys).
-	•	Wireshark can still reveal crucial metadata such as:
-	•	Server Name Indication (SNI)
-	•	Certificate chain details
-	•	Negotiated TLS versions and cipher suites
-	•	Analysing TLS metadata helps SOC Analysts detect:
-	•	Use of outdated or insecure TLS versions (e.g., TLS 1.0/1.1).
-	•	Suspicious or self-signed certificates that might indicate a Man-in-the-Middle (MitM) attack.
-	•	Malicious domains abusing encryption for command-and-control (C2) communication.
+## ✅ Conclusion	
+- TLS secures communication using encryption, making network traffic unreadable to unauthorised parties without the proper keys.
+- Wireshark cannot decrypt encrypted TLS traffic by default (without pre-shared keys or private keys).
+- Wireshark can still reveal crucial metadata such as:
+- Server Name Indication (SNI)
+- Certificate chain details
+- Negotiated TLS versions and cipher suites
+- Analysing TLS metadata helps SOC Analysts detect:
+- Use of outdated or insecure TLS versions (e.g., TLS 1.0/1.1).
+- Suspicious or self-signed certificates that might indicate a Man-in-the-Middle (MitM) attack.
+- Malicious domains abusing encryption for command-and-control (C2) communication.
 
 
 ## 📸 Submission
