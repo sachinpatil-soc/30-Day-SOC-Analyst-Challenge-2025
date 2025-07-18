@@ -1,164 +1,119 @@
-# 30-Day-SOC-Analyst-Challenge-2025
+# 🚀Day#1: Introduction to Log Analysis**
 
-This repository documents my progress through a 30-day hands-on challenge, designed to build and showcase essential SOC Analyst skills for job readiness. Each day features a focused lab or task to deepen understanding and practical expertise in cybersecurity operations.
+## **Objective:**
+The objective of this lab is to learn basics of **log analysis** and demonstrate how logs from different systems can be collected, analyzed, and used for security monitoring. Will learn how to generate simple logs on both Windows and Linux systems and how SOC Analysts use logs to detect security incidents.
 
-# 🚀 Day#01: Introduction to Log Analysis
+---
+## **What is a Log?**
+A **log** is a record of events in a system that captures important actions like errors, warnings, or user activities. These logs contain key information such as:
+- **Timestamp**
+- **Event Description**
+- **Severity (Critical, Error, Warning, Information)**
+- **Source (User, Process, Service)**
 
-## 🎯 Objective
-The objective of this lab is the foundational concepts of log analysis in cybersecurity. Will learn how logs are generated, collected, analyzed, and leveraged for effective security monitoring. This lab will demonstrate how SOC Analysts use log data to detect security incidents on both Windows and Linux systems.
+Logs are essential for understanding system behavior, detecting security incidents, and conducting forensic investigations.
 
-## 🧠 What is a Log?
-A log is a chronological record of events or activities that occur on a system, application, or network device. Logs are indispensable for monitoring system behavior, detecting security incidents, debugging, and conducting forensic investigations. Key information typically captured in a log entry includes:
+---
+## **Example logs**
 
-Timestamp: The exact date and time the event occurred.
-
-Event Description: A concise summary of what happened.
-
-Severity: The criticality level of the event (e.g., Critical, Error, Warning, Information).
-
-Source: The origin of the event (e.g., User, Process, Service, IP Address).
-
-## 🐧 Linux auth.log Example
-
-Here’s an example of a failed SSH login attempt from a Linux auth.log:
-
+🐧Linux auth.log Example
+```
 Apr  7 10:42:15 ubuntu sshd[12345]: Failed password for invalid user admin from 192.168.1.100 port 54321 ssh2
-
-Explanation of Log Components:
-
-Apr 7 10:42:15 — Timestamp
-
-ubuntu — Hostname
-
-sshd[12345] — Service name and process ID
-
-Failed password for invalid user admin — Event Description (failed login attempt)
-
-from 192.168.1.100 — Source IP address
-
-port 54321 — Source port
-
-ssh2 — Protocol version
-
-## 🌐 Common Log Sources
-
-### On Linux:
-
-System Logs (/var/log/): Contains core system messages. Important files include:
-
-/var/log/syslog (general system messages)
-
-/var/log/auth.log (authentication attempts, e.g., SSH, sudo)
-
-/var/log/kern.log (kernel-related messages)
-
-Application Logs: Specific to applications, such as web server logs (/var/log/apache2/access.log), or database logs (/var/log/mysql/error.log).
-
-### On Windows:
-
-Accessible via Event Viewer (eventvwr.msc), providing centralized access to:
-
-System Logs: Records events related to operating system health and components.
-
-Security Logs: Crucial for security, logging events like login attempts (successful/failed), permission changes, and audit policy modifications.
-
-Application Logs: Contains events from installed applications.
-
-PowerShell Logs: Logs detailed information about PowerShell command execution, including suspicious scripts (requires specific logging to be enabled).
+```
+Explanation:
+- `Apr 7 10:42:15` — Timestamp
+- `ubuntu` — Hostname
+- `sshd[12345]` — Service name and process ID
+- `Failed password for invalid user admi`n — Failed login attempt
+- `from 192.168.1.100` — Source IP address
+- `port 54321` — Source port
+- `ssh2` — Protocol version
 
 
-## 👩‍💻 How Does a SOC Analyst Use Log Analysis?
 
-Log analysis is a cornerstone of Security Operations Center (SOC) activities:
+## **Log Sources on Linux:**
+- **System Logs:** Stored in `/var/log/`, including files like `syslog` (system messages), `auth.log` (authentication attempts), and `kern.log` (kernel-related logs).
+- **Application Logs:** Application-specific logs like Apache (`/var/log/apache2/access.log`) or MySQL (`/var/log/mysql/error.log`).
 
-Incident Detection: SOC Analysts review logs to detect unusual or unauthorized activities, such as multiple failed login attempts, suspicious process executions, or anomalous network connections.
+### **Log Sources on Windows:**
+- **Event Viewer:** Provides access to logs such as:
+  - **System Logs**: Logs related to operating system events.
+  - **Security Logs**: Logs related to login attempts, permission changes, etc.
+  - **Application Logs**: Logs for system applications.
+  - **PowerShell Logs**: Logs for PowerShell commands, including suspicious execution.
 
-Forensics & Investigation: Logs provide an immutable timeline of events, essential for tracing back the actions taken by an attacker during or after a security incident.
+---
 
-Security Monitoring: Continuous, real-time log analysis helps in proactively identifying and responding to potential security threats.
+## **How Does a SOC Analyst Use Log Analysis?**
+- **Incident Detection:** SOC Analysts review logs to detect unusual or unauthorized activities, such as failed login attempts or suspicious processes.
+- **Forensics:** Logs are used to trace back the actions taken by an attacker during or after an incident.
+- **Security Monitoring:** Continuous log analysis helps detect potential security threats in real-time.
+- **Compliance:** Logs assist in maintaining compliance with regulatory standards (e.g., GDPR, HIPAA).
 
-Compliance & Auditing: Logs are vital for demonstrating adherence to regulatory standards (e.g., GDPR, HIPAA) and for internal auditing.
+---
+
+## **Popular Tools for Log Analysis:**
+- **ELK Stack (Elasticsearch, Logstash, Kibana):** A powerful suite for log collection, storage, and visualization.
+- **Splunk:** A leading tool for searching, analyzing, and visualizing machine-generated data.
+- **Graylog:** An open-source log management solution.
+- **Wazuh:** An open-source security monitoring platform that integrates well with ELK for log analysis and threat detection.
+
+---
+
+## **Lab Task: Simulating and Detecting Windows Powershell events**
+
+## **Lab Setup**
+### **Requirements:**
+- **Systems:** Windows 10/11 or Windows Server 2019/2022, Linux (Ubuntu or CentOS)
+- **Tools:**
+  - **Windows Event Viewer**
+  - **PowerShell (Pre-installed on Windows)**
+
+---
+
+## **Preparation:**
+For this lab, you will need to set up log collection on both Windows and Linux systems. Follow these steps to ensure everything is ready:
+
+### **On Windows:**
+1. Open **Group Policy Editor** (`gpedit.msc`):
+   - Navigate to `Computer Configuration > Administrative Templates > Windows Components > Windows PowerShell`.
+   - Ensure that **Module Logging**, **Script Block Logging**, and **Script Execution** are enabled.
+
+2. Open **Event Viewer**:
+   - Go to **Applications and Services Logs → Microsoft → Windows → PowerShell → Operational**.
 
 
-## 📊 Popular Tools for Log Analysis
 
-While Event Viewer and grep/tail are basic tools, SOCs use more advanced platforms for large-scale log management:
+### **Step 1: Simulate a Suspicious PowerShell Command**
+To simulate a suspicious activity, open an elevated PowerShell session and run the following command:
 
-ELK Stack (Elasticsearch, Logstash, Kibana): A powerful open-source suite for log collection, processing, storage, and visualization.
-
-Splunk: A leading commercial solution for searching, analyzing, and visualizing machine-generated data, widely used in enterprise SOCs.
-
-Graylog: An open-source log management platform offering centralized logging and analysis.
-
-Wazuh: An open-source security monitoring platform that integrates host-based intrusion detection (HIDS), log analysis, and security analytics.
-
-
-## 🧪 Lab Task: Simulating and Detecting Windows PowerShell Events
-
-This hands-on task will guide you through generating a specific event in Windows and then locating it within the security logs.
-
-## Lab Setup
-
-Systems: Windows 10/11 or Windows Server 2019/2022
-
-Tools: Windows Event Viewer, PowerShell (pre-installed)
-
-
-## Preparation
-
-To ensure detailed PowerShell logging for this lab, follow these steps:
-
-Open Group Policy Editor: Press Win + R, type gpedit.msc, and press Enter.
-
-Navigate to PowerShell Logging Settings: Go to Computer Configuration → Administrative Templates → Windows Components → Windows PowerShell.
-
-Enable Logging Features: Ensure that the following policies are Enabled:
-
-Module Logging
-
-Script Block Logging
-
-Script Execution
-
-Verify Event Viewer Path: Familiarize yourself with the location where PowerShell operational logs are stored:
-
-Applications and Services Logs → Microsoft → Windows → PowerShell → Operational.
-
-## ⚔️ Step 1: Simulate a Suspicious PowerShell Command
-
-To simulate an activity commonly performed during reconnaissance by attackers, open an elevated PowerShell session (Run as Administrator) and execute the following command:
-
+```powershell
 Get-LocalUser | Select-Object Name, Enabled
+```
+This command lists all local user accounts on the system, which could be used by attackers to enumerate users post-exploitation.
 
-Context: This command lists all local user accounts on the system. Attackers frequently use such enumeration techniques post-exploitation to gather information about potential targets or privilege escalation paths.
+### **Step 2: Detect the Log in Windows Event Viewer**
+1. Press `Win + R`, type `eventvwr.msc`, and press Enter.
 
-## 🔍 Step 2: Detect the Log in Windows Event Viewer
+2. Navigate to:
+   `Applications and Services Logs → Microsoft → Windows → PowerShell → Operational.`
 
-After executing the PowerShell command, verify its logging in Event Viewer:
+3. Click Filter Current Log, and filter for Event ID 4104 (which logs PowerShell script execution).
 
-Open Event Viewer: Press Win + R, type eventvwr.msc, and press Enter.
+4. Look for an entry that shows the execution of the Get-LocalUser command.
 
-Navigate to: Applications and Services Logs → Microsoft → Windows → PowerShell → Operational.
-
-Filter Current Log: Right-click on "Operational" and select Filter Current Log....
-
-In the Event IDs: field, enter 4104 (This Event ID specifically logs PowerShell script block execution).
-
-Click OK.
-
-Look for an entry that clearly shows the execution of the Get-LocalUser command within the event details.
+5. Take a screenshot of the event details.
 
 
+## Conclusion:
+- Understanding Log Analysis: Logs are crucial for detecting, investigating, and responding to security incidents. Through the use of Windows Event Viewer and Linux log files, you can monitor system activity and identify potential security issues.
 
-## ✅ Conclusion
-
-Understanding Log Analysis: This lab reinforces that logs are crucial for detecting, investigating, and responding to security incidents. Through hands-on experience with Windows Event Viewer and an introduction to Linux log files, you can begin to monitor system activity and identify potential security issues.
-
-SOC Analyst Role: Log analysis is a core competency for SOC Analysts, enabling them to detect threats, investigate incidents, and help ensure system compliance.
+- SOC Analyst Role: SOC Analysts use log analysis to detect threats, investigate incidents, and ensure system compliance.
 
 ## 📸 Submission
 
 Submit a screenshot of execution (Event ID 4104) in Event Viewer.
 
 ![image alt](https://github.com/sachinpatil-soc/30-Day-SOC-Analyst-Challenge-2025/blob/634641f522c0b9a0050713e97c112fe88bc2fe58/Images/Windows-powershell.JPEG) 
+
 
