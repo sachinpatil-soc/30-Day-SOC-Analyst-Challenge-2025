@@ -1,4 +1,7 @@
-# 🚀Day#18- Threat Intelligence Basics
+# 30-Day-SOC-Analyst-Challenge-2025
+This repository documents my progress through a 30-day hands-on challenge, designed to build and showcase essential SOC Analyst skills for job readiness. Each day features a focused lab or task to deepen understanding and practical expertise in cybersecurity operations.
+
+# 🚀Day#18:Threat Intelligence Basics
 
 ---
 
@@ -50,24 +53,24 @@ While triaging a phishing alert, you discovered three suspicious indicators:
 
 ---
 
-## 📸Submission
-
-- 🔹 **IP Lookup**  
-  - Screenshot from VirusTotal or AbuseIPDB showing details of `185.220.101.19`
-
-- 🔹 **Domain Lookup**  
-  - Screenshot from VirusTotal or URLScan showing reputation and scan results of `secure-login-verification.com`
-
-- 🔹 **Hash Analysis**  
-  - Screenshot from VirusTotal showing file type, detection ratio, and malware name for the hash `44d88612fea8a8f36de82e1278abb02f`
-
-- 🔹 **Threat Intelligence Feed (Optional Bonus)**  
-  - Screenshot of the IOC found in AlienVault OTX or ThreatFox with campaign name or tags
-
 ## ✅ **Expected Outcome**
 
-By completing this lab, you will:
+By completing this lab will:
 - Understand how to extract IOCs from phishing emails  
 - Use free tools to assess IPs, domains, and links  
 - Gain confidence in making escalation decisions based on threat intelligence  
 - Develop investigation habits like documentation and screenshot evidence
+
+
+## 📸Submission
+
+- 🔹 **Task-1-What is the type of the malicious file? **
+![image alt](https://github.com/sachinpatil-soc/30-Day-SOC-Analyst-Challenge-2025/blob/57e74df86e768d2aeb856f6b02621a147b06501f/Images/7-zip.png)
+
+
+- 🔹 **Task-2-What country is this IP registered in?**
+![image alt](https://github.com/sachinpatil-soc/30-Day-SOC-Analyst-Challenge-2025/blob/57e74df86e768d2aeb856f6b02621a147b06501f/Images/ip-location.png)
+
+- 🔹 **Task-3**-What malware name (if any) is associated with this file on VirusTotal?
+![image alt](https://github.com/sachinpatil-soc/30-Day-SOC-Analyst-Challenge-2025/blob/57e74df86e768d2aeb856f6b02621a147b06501f/Images/malware-name.png)
+
