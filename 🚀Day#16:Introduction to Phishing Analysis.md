@@ -1,3 +1,6 @@
+# 30-Day-SOC-Analyst-Challenge-2025
+This repository documents my progress through a 30-day hands-on challenge, designed to build and showcase essential SOC Analyst skills for job readiness. Each day features a focused lab or task to deepen understanding and practical expertise in cybersecurity operations.
+
 
 # 🚀Day#16:Introduction to Phishing Analysis
 
@@ -92,9 +95,9 @@ In this lab will Learn how to analyze a phishing email by examining headers, bod
 Your security team received a suspicious email claiming to be from PayPal. The sender address is:  
 `noreply@secure-paypai.com`
 
-Question 1: What is the reputation of the domain?
+Question 1: What is the reputation of the domain? 
 
 
-### Submission
+### Submission 
 - Snapshot showing the reputation of teh domain
 ![image alt](https://github.com/sachinpatil-soc/Ethical-Hacking-Projects/blob/cf00dd7c8b73d81f9d68b8b7b385dc706612e5ac/phishing-1.png)
